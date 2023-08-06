@@ -1,0 +1,96 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-image: url("image/mountains-615428_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+nav{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.305);
+    width: 100%;
+    font-size: 25px;
+    align-items: center;
+    justify-content:space-between;
+}
+nav li{
+    display: inline-block;
+    margin: 0px 20px;   
+    
+}
+nav a{
+    text-decoration: none;
+    color: white;
+
+}
+.logo{
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+nav a:hover{
+    color: greenyellow;
+}
+
+.menuline{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.show{
+    display: none;
+}
+
+
+@media all and (max-width:750px){
+    nav{
+        flex-direction: column;
+    }
+
+    nav li{
+        display:block;
+        padding:10px 0;
+        text-align: center;
+    }
+    
+    
+    ul{
+        text-align: center;
+        padding:0;
+        display: none;
+    }
+   
+
+    .logo{
+        align-self:flex-start;
+        margin:20px;
+    }
+
+    .menu{
+        display:block;
+        position:absolute;
+        right:20px;
+        top:25px;
+
+    } 
+    .show{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+   
+    .show:checked+ul{
+        display: block;
+    }
+}
+
